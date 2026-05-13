@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="
+            width=device-width,
+            initial-scale=1.0,
+            maximum-scale=1.0,
+            user-scalable=no
+        "
+    >
+
+    <title>Ultimate Car Survival Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+
+
+        <!-- TOP UI -->
+
+        <div class="top-ui">
+
+            <div id="score">
+                Score : 0
+            </div>
+
+            <div id="speed">
+                Speed : 6
+            </div>
+
+            <div id="boostMeter">
+                Boost : 100
+            </div>
+
+            <div id="modeName">
+                Highway Mode
+            </div>
+
+        </div>
+
+
+        <!-- MODE BUTTONS -->
+
+        <div class="mode-panel">
+
+            <button onclick="changeMode('highway')">
+                Highway
+            </button>
+
+            <button onclick="changeMode('desert')">
+                Desert
+            </button>
+
+            <button onclick="changeMode('snow')">
+                Snow
+            </button>
+
+            <button onclick="changeMode('night')">
+                Night
+            </button>
+
+        </div>
+
+
+        <!-- GAME CANVAS -->
+
+        <canvas id="gameCanvas"></canvas>
+
+
+        <!-- MOBILE CONTROLS -->
+
+        <div class="mobile-move-controls">
+
+            <button id="moveLeftBtn">
+                ⬅
+            </button>
+
+            <button id="boostBtn">
+                BOOST
+            </button>
+
+            <button id="moveRightBtn">
+                ➡
+            </button>
+
+        </div>
+
+
+        <!-- GAME OVER -->
+
+        <div id="gameOverScreen" class="hidden">
+
+            <h1>GAME OVER</h1>
+
+            <button onclick="restartGame()">
+                Restart
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
