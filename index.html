@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="
+            width=device-width,
+            initial-scale=1.0,
+            maximum-scale=1.0,
+            user-scalable=no
+        "
+    >
+
+    <title>Ultimate Car Survival Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+
+
+        <!-- TOP UI -->
+
+        <div class="top-ui">
+
+            <div id="score">
+                Score : 0
+            </div>
+
+            <div id="speed">
+                Speed : 6
+            </div>
+
+            <div id="boostMeter">
+                Boost : 100
+            </div>
+
+        </div>
+
+
+        <!-- MODE CONTROLS -->
+
+        <div class="controls-panel">
+
+            <div class="mode-buttons">
+
+                <button onclick="changeMode('highway')">
+                    Highway
+                </button>
+
+                <button onclick="changeMode('desert')">
+                    Desert
+                </button>
+
+                <button onclick="changeMode('mud')">
+                    Mud
+                </button>
+
+            </div>
+
+
+            <div class="weather-buttons">
+
+                <button onclick="changeWeather('day')">
+                    Day
+                </button>
+
+                <button onclick="changeWeather('night')">
+                    Night
+                </button>
+
+                <button onclick="changeWeather('rainy')">
+                    Rainy
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CANVAS -->
+
+        <canvas id="gameCanvas"></canvas>
+
+
+        <!-- MOBILE CONTROLS -->
+
+        <div class="mobile-controls">
+
+            <button id="leftBtn">
+                ◀
+            </button>
+
+            <button id="boostBtn">
+                BOOST
+            </button>
+
+            <button id="rightBtn">
+                ▶
+            </button>
+
+        </div>
+
+
+        <!-- GAME OVER -->
+
+        <div id="gameOverScreen" class="hidden">
+
+            <h1>GAME OVER</h1>
+
+            <button onclick="restartGame()">
+                Restart
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
